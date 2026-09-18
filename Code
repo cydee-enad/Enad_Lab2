@@ -1,0 +1,34 @@
+int getLampBrightness(bool switchOn, int brightnessSetting) {
+  if (switchOn) {
+    return brightnessSetting;
+  } else {
+    return 0;
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+
+  int lampBrightness;
+
+  lampBrightness = getLampBrightness(true, 0);
+  Serial.println(lampBrightness);
+
+  lampBrightness = getLampBrightness(true, 50);
+  Serial.println(lampBrightness);
+
+  lampBrightness = getLampBrightness(true, 100);
+  Serial.println(lampBrightness);
+
+  lampBrightness = getLampBrightness(false, 0);
+  Serial.println(lampBrightness);
+
+  lampBrightness = getLampBrightness(false, 50);
+  Serial.println(lampBrightness);
+
+  lampBrightness = getLampBrightness(false, 100);
+  Serial.println(lampBrightness);
+}
+
+void loop() {
+}
